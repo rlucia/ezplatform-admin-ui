@@ -128,6 +128,8 @@ services:
             - {name: kernel.event_subscriber, priority: -250}
 
     EzSystems\EzPlatformAdminUi\EventListener\CredentialsExpiredListener:
+        arguments:
+            $siteAccessGroups: '%ezpublish.siteaccess.groups%'
         tags:
             - {name: kernel.event_subscriber}
 
