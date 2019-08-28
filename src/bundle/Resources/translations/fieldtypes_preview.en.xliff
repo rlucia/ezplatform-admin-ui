@@ -226,10 +226,10 @@
         <target state="new">Password has expired</target>
         <note>key: ezuser.password_already_expired</note>
       </trans-unit>
-      <trans-unit id="b793464535daf900aa16e945e520d0706fa9194b" resname="ezuser.password_expire_in">
+      <trans-unit id="30990fd2813836b11e04044555a88ecd508924b4" resname="ezuser.password_expires_in">
         <source><![CDATA[Current password <b>expires in %count% days</b>]]></source>
         <target state="new"><![CDATA[Current password <b>expires in %count% days</b>]]></target>
-        <note>key: ezuser.password_expire_in</note>
+        <note>key: ezuser.password_expires_in</note>
       </trans-unit>
       <trans-unit id="fc4b6b718b2cee2f8a91703c070fd69756d5c4cd" resname="ezuser.username">
         <source>Username</source>

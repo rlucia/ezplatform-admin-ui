@@ -35,7 +35,7 @@ final class CredentialsExpirationWarningListener implements EventSubscriberInter
     /** @var \eZ\Publish\API\Repository\UserService */
     private $userService;
 
-    /** @var array */
+    /** @var string[][] */
     private $siteAccessGroups;
 
     public function __construct(

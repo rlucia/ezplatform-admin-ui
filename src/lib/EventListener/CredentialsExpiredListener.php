@@ -22,7 +22,7 @@ final class CredentialsExpiredListener implements EventSubscriberInterface
     /** @var \Symfony\Component\HttpFoundation\RequestStack */
     private $requestStack;
 
-    /** @var array */
+    /** @var string[][] */
     private $siteAccessGroups;
 
     /**

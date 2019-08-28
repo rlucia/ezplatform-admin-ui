@@ -214,7 +214,7 @@
             {% if parameters['is_password_expired'] %}
                 {{ 'ezuser.password_already_expired'|trans|desc('Password has expired') }}
             {% else %}
-                {{ 'ezuser.password_expire_in'|trans({
+                {{ 'ezuser.password_expires_in'|trans({
                     '%count%': parameters['password_expires_in'].days
                 })|desc('Current password <b>expires in %count% days</b>')|raw }}
             {% endif %}
