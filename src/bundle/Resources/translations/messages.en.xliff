@@ -26,6 +26,11 @@
         <target state="new">Reset password</target>
         <note>key: authentication.credentials_expired.reset_password</note>
       </trans-unit>
+      <trans-unit id="abf38ee1fa266bcfde1ce2e2367f3651832f80b6" resname="authentication.credentials_expired.warning">
+        <source>Your password will expire in %days% days. Consider updating it in My Account Settings.</source>
+        <target state="new">Your password will expire in %days% days. Consider updating it in My Account Settings.</target>
+        <note>key: authentication.credentials_expired.warning</note>
+      </trans-unit>
       <trans-unit id="d2293b387ecddbc6173fd579abd37873fcbc5e97" resname="authentication.forgot_password">
         <source>Forgot password?</source>
         <target state="new">Forgot password?</target>
