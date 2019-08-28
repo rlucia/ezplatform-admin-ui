@@ -68,7 +68,7 @@ final class CredentialsExpirationWarningListener implements EventSubscriberInter
         $passwordInfo = $this->userService->getPasswordInfo($apiUser);
         if ($passwordInfo->hasExpirationDate()) {
             $expirationWarningDate = $passwordInfo->getExpirationDate();
-            if ($expirationWarningDate < new DateTime()) {
+            if ($expirationWarningDate >= new DateTime()) {
                 $this->generateNotification($expirationWarningDate);
             }
         }
@@ -86,12 +86,13 @@ final class CredentialsExpirationWarningListener implements EventSubscriberInter
         $passwordExpiresIn = (new DateTime())->diff($passwordExpiresAt);
 
         $this->notificationHandler->warning($this->translator->trans(
-            'user_password_expire_warning',
+            /** @Desc("Your password will expire in %days% days. Consider updating it in My Account Settings.") */
+            'authentication.credentials_expired.warning',
             [
-                'days' => $passwordExpiresIn->days,
-                'url' => $this->urlGenerator->generate('ezplatform.user_profile.change_password'),
+                '%days%' => $passwordExpiresIn->days,
+                '%url%' => $this->urlGenerator->generate('ezplatform.user_profile.change_password'),
             ],
-            'user_password_change'
+            'messages'
         ));
     }
 
