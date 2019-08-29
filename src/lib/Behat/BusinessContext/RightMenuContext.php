@@ -29,8 +29,7 @@ class RightMenuContext extends BusinessContext
     public function theButtonsAreDisabled(TableNode $buttons): void
     {
         $rightMenu = new RightMenu($this->utilityContext);
-        foreach ($buttons->getHash() as $button)
-        {
+        foreach ($buttons->getHash() as $button) {
             Assert::assertFalse($rightMenu->isButtonActive($button['buttonName']));
         }
     }
